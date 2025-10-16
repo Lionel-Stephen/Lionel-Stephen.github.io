@@ -1,0 +1,120 @@
+/* Gold & Black theme for Lionelity Agency */
+:root{
+  --bg: #0b0b0b;
+  --panel: #0f0f0f;
+  --gold: #d4af37;
+  --muted: #bfbfbf;
+  --maxw: 1000px;
+  --radius: 14px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--bg), #070707);
+  color: #eee;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.6;
+}
+.container{
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:28px;
+}
+.hero{
+  padding:48px 0;
+  background: linear-gradient(90deg, rgba(212,175,55,0.06), rgba(0,0,0,0));
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.hero-inner{
+  display:flex;
+  gap:28px;
+  align-items:center;
+  justify-content:space-between;
+}
+.hero-text h1{
+  margin:0;
+  font-size:18px;
+  letter-spacing:2px;
+  color:var(--gold);
+  text-transform:uppercase;
+}
+.name{
+  margin:6px 0 8px 0;
+  font-size:28px;
+  color:#fff;
+}
+.tagline{
+  color:var(--muted);
+  margin:0 0 16px 0;
+}
+.btn{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:10px;
+  background:var(--gold);
+  color:#0b0b0b;
+  text-decoration:none;
+  font-weight:600;
+  margin-right:8px;
+}
+.btn-secondary{
+  background:transparent;
+  color:var(--gold);
+  border:1px solid rgba(212,175,55,0.18);
+}
+.hero-photo img{
+  width:160px;
+  height:160px;
+  object-fit:cover;
+  border-radius:50%;
+  border:4px solid rgba(212,175,55,0.18);
+  display:block;
+}
+.photo-note{
+  margin:8px 0 0 0;
+  color:var(--muted);
+  font-size:12px;
+}
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding:18px;
+  margin-top:18px;
+  border-radius:var(--radius);
+  border:1px solid rgba(255,255,255,0.03);
+}
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:12px;
+}
+.project h4{margin:0 0 6px 0;color:var(--gold)}
+.project a{color:var(--gold);text-decoration:none;font-weight:600}
+.skills-list{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.skills-list li{
+  background:rgba(255,255,255,0.03);
+  padding:8px 12px;
+  border-radius:8px;
+  font-weight:600;
+  color:var(--muted);
+}
+.social a{color:var(--gold);text-decoration:none;font-weight:600}
+.footer{
+  margin:28px 0 60px 0;
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+}
+/* responsive */
+@media(max-width:800px){
+  .hero-inner{flex-direction:column; text-align:center}
+  .hero-photo{margin-top:12px}
+}
